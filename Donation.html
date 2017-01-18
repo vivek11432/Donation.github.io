@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Donation Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/DonationCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <br /> <br /><br /><br /><br />
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding:30px;">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <a id="popover" href="#" data-toggle="popover" data-placement="top" data-content="$1000 still needed for this project"></a> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 FormBorder">
+                        <!-- Progress Bar -->
+                        <div class="progress">
+                            <div  class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="1000" style="width:0">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                        <br />
+                        <p class="FontStyle"><b style="color:#F15E33">Only 3 days left </b>to fund this project.</p>
+                        <br />
+                        <p class="FontStyle">Join the <b>42 </b>other donors who have already supported this project. Every dollar helps.</p>
+                        <br />
+                        <div class="row" style="margin-left: 30px;margin-right: 30px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                                    <input id="dollar" type="text" class="form-control" name="dollar" placeholder="50" value="0">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <button id="GiveNow" type="button" class="btn btn-success">Give Now</button>
+                            </div>
+                        </div>
+                        <br />
+                        <a class="AStyle">Why give $50?</a>
+
+                        <br />
+                        <br />
+                        <br />
+
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:5px;">
+                                <button id="SaveForLater" type="button" class="btn btn-gray">Save For Later</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+                                <button id="TellYourFriends" type="button" class="btn btn-gray" data-toggle="modal" data-target="#myModal">Tell Your Friends</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+            </div>
+
+        </div>
+    </div>    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Share on Facebook or Twitter</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Show the world how generous you are.</p>
+                    <button id="FacebookShare" class="btn btn-danger" style="font-size:30px;background-color:#3B5998;border:0;">Facebook</button>
+                    <button id="TwitterShare" class="btn btn-danger" style="font-size:30px;background-color:#1DA1F2;border:0;">Twitter</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="fb-root"></div>
+    <script src="js/DonationJS.js"></script>    
+</body>
+</html>
