@@ -19,17 +19,28 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
 //MyJs
 
 //---Asynchronous JavaScript SDK Code
-window.fbAsyncInit = function() {
-    FB.init({
-        appId: '618171075021824', status: true, cookie: true,
-        xfbml: true});
-};
-(function() {
-    var e = document.createElement('script'); e.async = true;
-    e.src = document.location.protocol +
-    '//connect.facebook.net/en_US/all.js';
-    document.getElementById('fb-root').appendChild(e);
-}());
+ //window.fbAsyncInit = function() {
+ //    FB.init({
+ //        appId: '618171075021824', status: true, cookie: true,
+ //        xfbml: true});
+ //};
+ //(function() {
+ //    var e = document.createElement('script'); e.async = true;
+ //    e.src = document.location.protocol +
+ //    '//connect.facebook.net/en_US/all.js';
+ //    document.getElementById('fb-root').appendChild(e);
+ //}());
+
+ window.fbAsyncInit = function () {
+     FB.init({
+         appId: '618171075021824',
+         xfbml: true,
+         version: 'v2.8'
+     });
+     //FB.AppEvents.logPageView();
+ };
+
+
 //---End Asynchronous JavaScript SDK Code
 
 $(document).ready(function () {
@@ -83,21 +94,18 @@ $(document).ready(function () {
 
     $('#FacebookShare').click(function (e) {
         var loc = location.href;
-        //var t = "Yay, I donated!";
-
-        //window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(loc) + '&t=' + encodeURIComponent(t), 'sharer', 'status=0,width=626,height=436, top=' + ($(window).height() / 2 - 225) + ', left=' + ($(window).width() / 2 - 313) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-
+        var t = "Yay, I donated!";
         e.preventDefault();
-        FB.ui(
-        {
-            method: 'feed',
-            name: 'Yay, I donated!',
-            link: loc,
-            picture: '',
-            caption: 'Yay, I donated!',
-            description: 'I have donated money for a good cause.',
-            message: ''
-        });
+         FB.ui(
+         {
+             method: 'feed',
+             name: 'Yay, I donated!',
+             link: loc,
+             picture: '',
+             caption: 'Yay, I donated!',
+             description: 'I have donated money for a good cause.',
+             message: ''
+         });
 
     });
 
